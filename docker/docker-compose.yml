@@ -60,7 +60,7 @@ services:
         context: ../
         dockerfile: docker/server/Dockerfile
       ports:
-        - '28492:28492'
+        - '3000:3000'
       entrypoint: bash -c 'node server.js'
 
 volumes:

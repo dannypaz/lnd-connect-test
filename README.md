@@ -15,5 +15,8 @@ Generate a valid pubkey from another lnd instance OR use this example key: `02c9
 
 
 ```
-docker-compose exec lnd_btc bash -c 'lncli connect 02c9256ed7819decb9fb2659623a587c2a741fca9b264cef6b9136bf325a18bc1c@host.docker.internal:28492'
+docker-compose exec lnd_btc bash -c 'lncli connect 02c9256ed7819decb9fb2659623a587c2a741fca9b264cef6b9136bf325a18bc1c@host.docker.internal:3000'
 ```
+
+
+I've also included a `server.good.js` file that produces the correct error for the server. This uses https and produces the following error `[lncli] rpc error: code = Unknown desc = dial tcp localhost:10111: connect: connection refused` or `[lncli] rpc error: code = OutOfRange desc = EOF`
